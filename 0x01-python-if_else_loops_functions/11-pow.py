@@ -9,4 +9,4 @@ def pow(a, b):
             result *= a
         a *= a
         b >>= 1
-    return "{:.2f}".format(result)
+    return result
