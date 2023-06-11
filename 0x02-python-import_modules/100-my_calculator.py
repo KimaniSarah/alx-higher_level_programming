@@ -19,5 +19,6 @@ if __name__ == '__main__':
     elif operator == '/':
         result = divide(a, b)
     else:
+        print("Unknown operator. Available operators: +, -, * and /")
         sys.exit(1)
     print("{} {} {} = {}".format(a, operator, b, result))
