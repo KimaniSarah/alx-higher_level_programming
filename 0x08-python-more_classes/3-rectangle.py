@@ -55,9 +55,9 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return ""
 
-        rectangle_str = []
-        for i in range(self.__height):
-            for j in range(self.__width):
-                rectangle_str.append("#")
-            rectangle_str.append("\n")
-        return ''.join(rectangle_str)
+        r = []
+        for i in range(self.height):
+            [r.append('#') for k in range(self.width)]
+            if i != self.height - 1:
+                r.append("\n")
+        return "".join(r)
