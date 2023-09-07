@@ -20,7 +20,10 @@ My name is Aggie wangui
 My name is well x Jones II
 
 >>> say_my_name("Bien")
-    My name is Bien 
+    My name is Bien
+
+Invalid Names
+=============
 
 >>> say_my_name(2, "Jamy")
 Traceback (most recent call last):
