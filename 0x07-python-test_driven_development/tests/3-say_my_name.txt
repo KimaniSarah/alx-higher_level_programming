@@ -27,3 +27,7 @@ My name is Sarah Kimani
 
 >>> say_my_name("Sarah")
 My name is Sarah
+
+>>> say_my_name(None)
+Traceback (most recent call last)
+TypeError: first_name must be a string
