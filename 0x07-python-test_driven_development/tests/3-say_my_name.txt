@@ -24,3 +24,6 @@ TypeError: last_name must be a string
 
 >>> say_my_name("Sarah", "Kimani")
 My name is Sarah Kimani
+
+>>> say_my_name("Sarah")
+My name is Sarah
