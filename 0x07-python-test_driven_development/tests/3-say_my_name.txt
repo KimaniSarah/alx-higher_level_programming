@@ -11,7 +11,10 @@ Usage
 
 ``say_my_name(...)`` prints "My name is <first_name> <last_name>".
 
+#import
 >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+#test cases
 >>> say_my_name("Brennan", "Baraban")
 My name is Brennan Baraban
 
