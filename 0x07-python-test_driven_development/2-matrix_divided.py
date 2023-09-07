@@ -31,7 +31,7 @@ def matrix_divided(matrix, div):
 
     first_row_size = len(matrix[0])
     if any(len(row) != first_row_size for row in matrix):
-        raise ValueError("matrix must have each row with the same size")
+        raise TypeError("Each row of the matrix must have the same size")
 
     if div == 0:
         raise ZeroDivisionError("division by zero")
