@@ -1,12 +1,13 @@
 # 3-say_my_name.txt
 
+'''say_my_name(...)''' function that prints My name is <first name> <last name>
 
-This modules defines a function ``say_my_name(first_name, last_name="")``.
-
+======
 Usage
-=====
+======
 
-``say_my_name(...)`` prints "My name is <first_name> <last_name>".
+function that prints My name is <first name> <last name>
+
 
 #import
 >>> say_my_name = __import__('3-say_my_name').say_my_name
