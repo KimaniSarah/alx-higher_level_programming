@@ -31,5 +31,6 @@ class Rectangle(BaseGeometry):
         return("[Rectangle] {}/{}".format(self.__width, self.__height))
 
     def area(self):
+        """return the area of the retangle"""
         result = self.__width * self.__height
         return result
