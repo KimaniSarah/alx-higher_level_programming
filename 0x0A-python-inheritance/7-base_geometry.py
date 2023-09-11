@@ -9,6 +9,7 @@ class BaseGeometry:
     a class with one method
     """
     def area(self):
+        """raise error"""
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
