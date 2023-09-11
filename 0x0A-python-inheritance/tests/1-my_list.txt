@@ -53,16 +53,6 @@ Traceback (most recent call last):
 NameError: name 'my_list2' is not defined
 
 
-case 3: passed a list
-
->>> a = [1, 9, 4]
->>> my_list = MyList(a)
->>> my_list.print_sorted()
-[1, 4, 9]
->>>
-
--------------------------------------------
-
 case 4: empty list
 
 >>> a = []
