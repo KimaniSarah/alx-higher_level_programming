@@ -2,14 +2,7 @@
 """
 a class base geometry
 """
-
-
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
-
-
-"""
-a class base geometry
-"""
 
 
 class Rectangle(BaseGeometry):
