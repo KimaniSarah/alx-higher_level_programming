@@ -3,6 +3,7 @@
 (directly or indirectly) from the specified class
 """
 
+
 def inherits_from(obj, a_class):
     """
     Args:
@@ -11,10 +12,7 @@ def inherits_from(obj, a_class):
     Return: returns True if the object is an instance of a class that inherited
         (directly or indirectly) from the specified class ; otherwise False.
     """
-    return isinstance(obj, a_class)
-
-    for instance in type(obj).mro():
-        if instance == a_class:
-            return True
-    return False
-
+    if issubclass(type(obj), a_class) and type(obj) != a_class:
+        return True
+    else:
+        return False
