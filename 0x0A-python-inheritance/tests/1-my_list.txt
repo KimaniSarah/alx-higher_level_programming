@@ -60,4 +60,3 @@ NameError: name 'my_list2' is not defined
 >>> my_list.append(-5)
 >>> my_list.print_sorted()
 [-5, -1, 1, 5, 51]
->>>
