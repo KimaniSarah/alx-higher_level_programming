@@ -15,9 +15,4 @@ def is_kind_of_class(obj, a_class):
     True if the object is an instance of,or if the object is an
     instance of a class that inherited from,the specified clas
     """
-    def inherits_from(obj, a_class):
-        return isinstance(obj, a_class)
-    for subclass in type(obj).mro():
-        if subclass == a_class:
-            return True
-    return False
+    return isinstance(obj, a_class)
