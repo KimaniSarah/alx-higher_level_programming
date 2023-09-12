@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+
+
 import json
 """ gives the JSON representation of an object(string)"""
 
