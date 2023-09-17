@@ -72,13 +72,13 @@ class Rectangle(Base):
         return results
 
     def display(self):
-        for column in range(self.__height):
-            for row in range(self.__width):
-                print("#", end="")
-            print("")
+        for _ in range(self.y):
+            print()
+        for _ in range(self.height):
+            print(" " * self.x + "#" * self.width)
 
     def update(self, *args, **kwargs):
-        if len(args) < 0:
+        if len(args) > 0:
             if len(args) >= 1:
                 self.id = args[0]
             if len(args) >= 2:
@@ -93,6 +93,9 @@ class Rectangle(Base):
             for key, value in kwargs.items():
                 if hasattr(self, key):
                     setattr(self, key, value)
+
+    def to_dictionary(self):
+            return self.__dict__
 
     def __str__(self):
         return (f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}")
