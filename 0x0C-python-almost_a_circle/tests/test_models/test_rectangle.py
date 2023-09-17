@@ -1,6 +1,9 @@
 #!/usr/bin/python3
 """test the rectangle class"""
 import unittest
+import io
+from unittest.mock import patch
+from io import StringIO
 from models.rectangle import Rectangle
 
 
@@ -44,6 +47,16 @@ class testRectangle(unittest.TestCase):
     def test_area(self):
         rect = Rectangle(3, 8)
         self.assertEqual(rect.area(), 24)
+
+
+    def test_display(self):
+        self.rect = Rectangle(3, 2, 1, 1)
+        expected_output = "\n ###\n ###\n"
+        with io.StringIO() as mock_stdout:
+            with patch('sys.stdout', new=mock_stdout):
+                self.rect.display()
+                output = mock_stdout.getvalue()
+                self.assertEqual(output, expected_output)
 
     def test_str(self):
         """ Test the string representation"""
