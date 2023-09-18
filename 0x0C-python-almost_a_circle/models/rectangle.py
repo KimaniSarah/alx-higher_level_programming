@@ -40,7 +40,6 @@ class Rectangle(Base):
     def width(self, value):
         self.__width = value
 
-
     @property
     def height(self):
         return self.__height
@@ -49,7 +48,6 @@ class Rectangle(Base):
     def height(self, value):
         self.__height = value
 
-
     @property
     def x(self):
         return self.__x
@@ -57,7 +55,6 @@ class Rectangle(Base):
     @x.setter
     def x(self, value):
         self.__x = value
-
 
     @property
     def y(self):
@@ -95,7 +92,16 @@ class Rectangle(Base):
                     setattr(self, key, value)
 
     def to_dictionary(self):
-            return self.__dict__
+        key_list = ['id', 'width', 'height', 'x', 'y']
+        dict_result = {}
+        for key in key_list:
+            dict_result[key] = getattr(self, key)
+        return dict_result
 
     def __str__(self):
-        return (f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}")
+        str_rect = "[Rectangle] "
+        str_id = "({}) ".format(self.id)
+        str_xy = "{}/{} - ".format(self.x, self.y)
+        str_w = "{}/{}".format(self.width, self.height)
+
+        return str_rect + str_id + str_xy + str_w
