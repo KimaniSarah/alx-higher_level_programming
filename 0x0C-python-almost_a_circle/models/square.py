@@ -27,7 +27,8 @@ class Square(Rectangle):
             2nd argument should be the size attribute
             3rd argument should be the x attribute
             4th argument should be the y attribute
-            kwargs:double pointer to a dictionary: key/value (keyworded arguments)
+            kwargs:double pointer to a
+                dictionary: key/value (keyworded arguments)
         """
         if len(args) > 0:
             if len(args) >= 1:
