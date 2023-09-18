@@ -32,3 +32,8 @@ class test_square(unittest.TestCase):
                 self.rect.display()
                 output = mock_stdout.getvalue()
                 self.assertEqual(output, expected_output)
+
+    def test_dict(self):
+        S4 = Square(4, 1, 1, 2)
+        self.assertIsInstance(S4.to_dictionary(), dict)
+        self.assertEqual(S4.to_dictionary(), {'id': 2, 'x': 1, 'size': 4, 'y': 1})
