@@ -5,15 +5,27 @@ from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
+    """init a square classs"""
+
     def __init__(self, size, x=0, y=0, id=None):
+        """Make a new square
+        Arguments
+        =============
+        SIZE: int
+        X: int
+        Y:int
+        ID: int
+        """
         super().__init__(size, size, x, y, id)
 
     @property
     def size(self):
+        """GET THE SIZE"""
         return self.width
 
     @size.setter
     def size(self, value):
+        """UPDATE THE SIZE"""
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         self.width = value
@@ -45,6 +57,7 @@ class Square(Rectangle):
                     setattr(self, key, value)
 
     def to_dictionary(self):
+        """REPRESENTATION OF THE DIC"""
         key_list = ['id', 'x', 'size', 'y']
         dict_results = {}
         for key in key_list:
@@ -52,4 +65,5 @@ class Square(Rectangle):
         return dict_results
 
     def __str__(self):
+        """ STR DUNDER METHOD """
         return(f"[Square] ({self.id}) {self.x}/{self.y} - {self.width}")

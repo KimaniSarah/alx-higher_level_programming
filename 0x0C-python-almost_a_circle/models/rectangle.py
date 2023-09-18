@@ -1,11 +1,19 @@
 #!/usr/bin/python3
+"""defines the triangle class"""
 import sys
 from models.base import Base
-"""defines the triangle class"""
 
 
 class Rectangle(Base):
+    """START A NEW RECTANGLE CLASS"""
     def __init__(self, width, height, x=0, y=0, id=None):
+        """INIT A NEW RECTANGLE
+        ARGS
+        ====
+        width (int)
+        height (int)
+        x, y (int)
+        """
         super().__init__(id)
         if not isinstance(width, int):
             raise TypeError("width must be an integer")
@@ -34,47 +42,70 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        """Get the value of the width"""
         return self.__width
 
     @width.setter
     def width(self, value):
+        """Set/Update the width value"""
         self.__width = value
 
     @property
     def height(self):
+        """Get the value of the height"""
         return self.__height
 
     @height.setter
     def height(self, value):
+        """Set/Update the height value"""
         self.__height = value
 
     @property
     def x(self):
+        """Get the value of the x"""
         return self.__x
 
     @x.setter
     def x(self, value):
+        """Set/Update the x value"""
         self.__x = value
 
     @property
     def y(self):
+        """Get the value of the y"""
         return self.__y
 
     @y.setter
     def y(self, value):
+        """Set/Update the y value"""
         self.__y = value
 
     def area(self):
+        """Return the area of the rectangle"""
         results = self.__width * self.__height
         return results
 
     def display(self):
+        """
+        prints in stdout the Rectangle
+        instance with the character # -
+        you don’t need to handle x and y here
+        """
         for _ in range(self.y):
             print()
         for _ in range(self.height):
             print(" " * self.x + "#" * self.width)
 
     def update(self, *args, **kwargs):
+        """Update the rectangle
+        Arguments
+        ==========
+        1ST argument should be the ID attribute
+        2ND argument should be the WIDTH attribute
+        3RD argument should be the HEIGHT attribute
+        4TH argument should be the X attribute
+        5TH argument should be the Y attribute
+        """
         if len(args) > 0:
             if len(args) >= 1:
                 self.id = args[0]
@@ -92,6 +123,7 @@ class Rectangle(Base):
                     setattr(self, key, value)
 
     def to_dictionary(self):
+        """DIC REPRESENTATION"""
         key_list = ['id', 'width', 'height', 'x', 'y']
         dict_result = {}
         for key in key_list:
@@ -99,6 +131,7 @@ class Rectangle(Base):
         return dict_result
 
     def __str__(self):
+        """STR DUNDER METHOS """
         str_rect = "[Rectangle] "
         str_id = "({}) ".format(self.id)
         str_xy = "{}/{} - ".format(self.x, self.y)
