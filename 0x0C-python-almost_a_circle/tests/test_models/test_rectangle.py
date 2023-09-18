@@ -17,14 +17,16 @@ class testRectangle(unittest.TestCase):
         self.assertEqual(rec.y, 0)
 
     def test_width(self):
-        """Test that an exception is raised when width is not an integer or <= 0"""
+        """Test that an exception is
+        raised when width is not an integer or <= 0"""
         with self.assertRaises(TypeError):
             Rectangle("1", 4, 0, 0)
         with self.assertRaises(ValueError):
             Rectangle(-1, 3)
 
     def test_height(self):
-        """Test that an exception is raised when height is not an integer or <= 0"""
+        """Test that an exception is
+        raised when height is not an integer or <= 0"""
         with self.assertRaises(TypeError):
             Rectangle(1, "4")
         with self.assertRaises(ValueError):
@@ -47,7 +49,6 @@ class testRectangle(unittest.TestCase):
     def test_area(self):
         rect = Rectangle(3, 8)
         self.assertEqual(rect.area(), 24)
-
 
     def test_display(self):
         self.rect = Rectangle(3, 2, 1, 1)

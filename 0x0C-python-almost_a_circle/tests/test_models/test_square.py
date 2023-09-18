@@ -36,4 +36,5 @@ class test_square(unittest.TestCase):
     def test_dict(self):
         S4 = Square(4, 1, 1, 2)
         self.assertIsInstance(S4.to_dictionary(), dict)
-        self.assertEqual(S4.to_dictionary(), {'id': 2, 'x': 1, 'size': 4, 'y': 1})
+        expected = {'id': 2, 'x': 1, 'size': 4, 'y': 1}
+        self.assertEqual(S4.to_dictionary(), expected)
