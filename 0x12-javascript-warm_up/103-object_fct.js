@@ -6,7 +6,9 @@
  * @param {Function} theFunction - The function to be called
  */
 function incrementAndCall (number, theFunction) {
-  const incr = (x) => x + 1; // New function incr that increments the integer value
+  const incr = (x) => x + 1;
   const incrementedNumber = incr(number);
   theFunction(incrementedNumber);
 }
+const myFunction = (result) => console.log(`The incremented number is ${result}`);
+incrementAndCall(5, myFunction);
