@@ -1,14 +1,14 @@
 #!/usr/bin/node
 
-function add (a, b) {
-  return a + b;
+const args = process.argv;
+const a = parseInt(args[2]);
+const b = parseInt(args[3]);
+function add(a, b){
+	let result = a + b;
+	console.log(result);
 }
-const arg1 = process.argv[2];
-const arg2 = process.argv[3];
-const num1 = parseInt(arg1);
-const num2 = parseInt(arg2);
-if (!isNaN(num1) && !isNaN(num2)) {
-  console.log(add(num1, num2));
-} else {
-  console.log('Invalid input. Please provide two integers.');
+if (!isNaN(a) && !isNaN(b)){
+	add(a, b);
+}else{
+	console.log("NaN");
 }
