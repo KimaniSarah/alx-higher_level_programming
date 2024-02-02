@@ -11,15 +11,18 @@ class Rectangle {
    * @property {method} print - prints the rectangle using the character X
    * @returns void
    */
-  print () {
-    for (let i = 0; i < this.height; i++) {
-      let s = '';
-      for (let j = 0; j < this.width; j++) {
-        s += 'X';
-      }
-      console.log(s);
-    }
-  }
+	print() {
+		let x = 0;
+		while (x < this.height) {
+			let y = 0;
+			while (y < this.width) {
+				process.stdout.write("X");
+				y++;
+			}
+			console.log();
+			x++;
+		}
+	}
 }
 
 module.exports = Rectangle;
